@@ -6,7 +6,8 @@
 * Confidence: `High`
 
 ## Description
-The detector sees if a contract contains a direct usage of filecoin precompiles.
+The detector sees if a contract contains a direct usage of filecoin [precompiles](https://medium.com/@rbkhmrcr/precompiles-solidity-e5d29bd428c4).
+Direct precompile usage might be dangerous due to missing checks that may to lead to DoS ([Denial of Service](https://medium.com/@Knownsec_Blockchain_Lab/in-depth-understanding-of-denial-of-service-vulnerabilities-dd437b1d7a1c)) or unexpected smart contract behaviour.
 
 
 ## Vulnerable Scenario
