@@ -27,11 +27,10 @@ class DirectPrecompile(AbstractDetector):
         if isinstance(fun, Function):   # check for a correct function type
             for node in fun.nodes:
                 if 'staticcall' in str(node): # precompiles are called with staticcalls
+                    if precompile_address_1 in str(node) or precompile_address_2 in str(node):
+                        return True
                     for var in node.variables_read:
                         if precompile_address_1 in str(var.expression) or precompile_address_2 in str(var.expression):
-                            return True
-                    for node in fun.nodes:
-                        if precompile_address_1 in str(node) or precompile_address_2 in str(node):
                             return True
 
 
