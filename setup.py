@@ -8,8 +8,8 @@ setup(
     version="0.1",
     packages=find_packages(),
     python_requires=">=3.8",
-    install_requires=["slither-analyzer==0.1"],
+    install_requires=["slither-analyzer>=0.1"],
     entry_points={
-        "slither_analyzer.plugin": "slither my-plugin=slither_my_plugin:make_plugin",
+        "slither_analyzer.plugin": "slither my-plugin=filecoin_detectors:make_plugin",
     },
 )
